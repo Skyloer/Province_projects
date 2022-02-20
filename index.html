@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="./img/a.jpg"/>
+    <audio src="./music/a.flac"></audio>
+</body>
+<script>
+    let mouse = (els,m_el) => {
+        // if(typeof els != )
+        els = typeof els != 'array' ? [els] : els;
+        [...els].forEach(v => {
+            v.onmouseover = () => {
+                m_el.play();
+            };
+            v.onmouseout = () => {
+                m_el.load();
+            }
+        })
+    }
+    mouse(document.querySelector('青海'),document.querySelector('金属咔嚓声'));
+    // console.log()
+</script>
+</html>
